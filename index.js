@@ -2,7 +2,9 @@ import express from "express";
 import cors from "cors";
 import userRouter from "./routes/UserRegister.js";
 import mongoose from "mongoose";
+import dotenv from "dotenv"
 const app = express();
+dotenv.config()
 var whitelist = ["http://localhost:5173", "http://192.168.31.56:5173","https://magnificent-flan-0d2cd1.netlify.app"];
 var corsOptions = {
   origin: function (origin, callback) {
