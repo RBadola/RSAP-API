@@ -5,14 +5,14 @@ import mongoose from "mongoose";
 import dotenv from "dotenv"
 const app = express();
 dotenv.config()
-var whitelist = ["http://localhost:5173", "http://192.168.31.56:5173","https://magnificent-flan-0d2cd1.netlify.app"];
+// var whitelist = ["http://localhost:5173", "http://192.168.31.56:5173","https://magnificent-flan-0d2cd1.netlify.app"];
 app.use(function(req, res, next) {
-  // res.header("Access-Control-Allow-Origin", "*");
-  const allowedOrigins = whitelist;
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-       res.setHeader('Access-Control-Allow-Origin', origin);
-  }
+  res.header("Access-Control-Allow-Origin", "*");
+  // const allowedOrigins = whitelist;
+  // const origin = req.headers.origin;
+  // if (allowedOrigins.includes(origin)) {
+  //      res.setHeader('Access-Control-Allow-Origin', origin);
+  // }
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   res.header("Access-Control-Allow-credentials", true);
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
