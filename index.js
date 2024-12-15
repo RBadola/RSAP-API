@@ -3,7 +3,7 @@ import cors from "cors";
 import userRouter from "./routes/UserRegister.js";
 import mongoose from "mongoose";
 const app = express();
-var whitelist = ["http://localhost:5173", "http://192.168.31.56:5173"];
+var whitelist = ["http://localhost:5173", "http://192.168.31.56:5173","https://magnificent-flan-0d2cd1.netlify.app"];
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
